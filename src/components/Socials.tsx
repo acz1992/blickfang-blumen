@@ -9,7 +9,7 @@ import {
 const Socials = () => {
 	return (
 		<div className="hidden xl:flex ml-24">
-			<ul>
+			<ul className="flex gap-x-4">
 				<li>
 					<a href="http://www.facebook.com" target="_blank">
 						<ImFacebook />

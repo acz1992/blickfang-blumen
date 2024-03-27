@@ -46,16 +46,16 @@ const MobileNav = () => {
 				</div>
 				{/* Menu List */}
 				<ul className="h-full flex flex-col justify-center items-center gap-y-8  text-primary font-primary font-bold text-3xl ">
-					<li>
+					<li onClick={() => setOpenMenu(false)}>
 						<Link to="/">Home</Link>
 					</li>
-					<li>
+					<li onClick={() => setOpenMenu(false)}>
 						<Link to="/about">About</Link>
 					</li>
-					<li>
+					<li onClick={() => setOpenMenu(false)}>
 						<Link to="/portfolio">Portfolio</Link>
 					</li>
-					<li>
+					<li onClick={() => setOpenMenu(false)}>
 						<Link to="/contact">Contact</Link>
 					</li>
 				</ul>
