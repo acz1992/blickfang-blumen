@@ -13,15 +13,21 @@ const CursorProvider = ({ children }) => {
 	// Cursor Background State
 	const [cursorBG, setCursorBG] = useState("default");
 
+	const mobileViewportIsActive = window.innerWidth < 768;
+
 	useEffect(() => {
-		const move = (e) => {
-			setCursorPos({ x: e.clientX, y: e.clientY });
-		};
-		window.addEventListener("mousemove", move);
-		// Remove Event
-		return () => {
-			window.removeEventListener("mousemove", move);
-		};
+		if (!mobileViewportIsActive) {
+			const move = (e) => {
+				setCursorPos({ x: e.clientX, y: e.clientY });
+			};
+			window.addEventListener("mousemove", move);
+			// Remove Event
+			return () => {
+				window.removeEventListener("mousemove", move);
+			};
+		} else {
+			setCursorBG("none");
+		}
 	});
 
 	// Cursor Variants
@@ -38,6 +44,11 @@ const CursorProvider = ({ children }) => {
 			y: cursorPos.y - 72,
 			backgroundColor: "#fff",
 			mixBlendMode: "difference",
+		},
+		none: {
+			width: 0,
+			height: 0,
+			backgroundColor: "rgba(255, 255, 255, 1)",
 		},
 	};
 
