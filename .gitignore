@@ -23,9 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# In Root
-.eslintrc.cjs
-package-lock.json
-tsconfig.json
-tsconfig.node.json
-vite.config.ts
