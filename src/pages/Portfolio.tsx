@@ -4,14 +4,28 @@ import Image2 from "../assets/img/portfolio/2.png";
 import Image3 from "../assets/img/portfolio/3.png";
 import Image4 from "../assets/img/portfolio/4.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { transition1 } from "../utils/transitions";
 
 const Portfolio = () => {
 	return (
-		<section className="section">
+		<motion.section
+			initial={{ opacity: 0, y: "100%" }}
+			animate={{ opacity: 1, y: 0 }}
+			exit={{ opacity: 0, y: "100%" }}
+			transition={transition1}
+			className="section"
+		>
 			<div className="container mx-auto h-full relative">
 				<div className="flex flex-col lg:flex-row h-full items-center justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8">
 					{/* Text */}
-					<div className="flex flex-col lg:items-start">
+					<motion.div
+						initial={{ opacity: 0, y: "-80%" }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: "-80%" }}
+						transition={transition1}
+						className="flex flex-col lg:items-start"
+					>
 						<h1 className="h1">Portfolio</h1>
 						<p className="mb-12 max-w-sm">
 							Blickanfang Blumen bloomed from my love of flowers,{" "}
@@ -28,7 +42,7 @@ const Portfolio = () => {
 						>
 							Hire our services
 						</Link>
-					</div>
+					</motion.div>
 					{/* Images Grid */}
 					<div className="grid grid-cols-2 lg:gap-2">
 						{/* Image 1 */}
@@ -66,7 +80,7 @@ const Portfolio = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 
