@@ -35,7 +35,7 @@ const MobileNav = () => {
 				variants={menuVariants}
 				initial="hidden"
 				animate={openMenu ? "show" : ""}
-				className="bg-white shadow-2xl w-full absolute top-0 right-0 mx-w-xs h-screen z-20"
+				className="bg-white shadow-2xl w-4/5 absolute top-0 right-0 mx-w-xs h-screen z-20"
 			>
 				{/* Icon */}
 				<div
