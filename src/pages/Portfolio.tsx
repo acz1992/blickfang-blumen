@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Image1 from "../assets/img/portfolio/1.png";
 import Image2 from "../assets/img/portfolio/2.png";
 import Image3 from "../assets/img/portfolio/3.png";
@@ -9,7 +9,7 @@ import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
 
 const Portfolio = () => {
-	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)!;
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}

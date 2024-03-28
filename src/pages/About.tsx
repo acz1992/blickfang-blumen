@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
 
 import WomanImg from "../assets/img/about/woman.png";
@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
 
 const About = () => {
-	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)!;
 
 	return (
 		<motion.section
