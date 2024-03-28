@@ -1,9 +1,17 @@
-import React, { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, ReactNode } from "react";
 
-export const CursorContext = createContext();
-/* createContext<string | undefined>(undefined) */
+interface CursorContextType {
+	cursorVariants: Record<string, object>;
+	cursorBG: string;
+	mouseEnterHandler: () => void;
+	mouseLeaveHandler: () => void;
+}
 
-const CursorProvider = ({ children }) => {
+export const CursorContext = createContext<CursorContextType | undefined>(
+	undefined
+);
+
+const CursorProvider = ({ children }: { children: ReactNode }) => {
 	// Cursor Position State
 	const [cursorPos, setCursorPos] = useState({
 		x: 0,
@@ -17,7 +25,7 @@ const CursorProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (!mobileViewportIsActive) {
-			const move = (e) => {
+			const move = (e: MouseEvent) => {
 				setCursorPos({ x: e.clientX, y: e.clientY });
 			};
 			window.addEventListener("mousemove", move);
@@ -28,7 +36,7 @@ const CursorProvider = ({ children }) => {
 		} else {
 			setCursorBG("none");
 		}
-	});
+	}, [mobileViewportIsActive]);
 
 	// Cursor Variants
 	const cursorVariants = {

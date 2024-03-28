@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { CursorContext } from "./context/CursorContext";
 
 function App() {
-	const { cursorVariants, cursorBG } = useContext(CursorContext);
+	const { cursorVariants, cursorBG } = useContext(CursorContext)!;
 	return (
 		<>
 			<Router>

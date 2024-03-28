@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import WomanImg from "../assets/img/home/woman.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -6,7 +6,7 @@ import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
 
 const Home = () => {
-	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)!;
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
