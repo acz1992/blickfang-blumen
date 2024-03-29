@@ -1,6 +1,6 @@
-import React from "react";
 import Socials from "./Socials";
-import Logo from "../assets/img/header/logo.svg";
+/* import Logo from "../assets/img/header/logo.svg"; */
+import Logo from "../assets/img/header/blicklogo.png";
 import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
 

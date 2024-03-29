@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
 
-import WomanImg from "../assets/img/about/woman.png";
+import BackKate from "../assets/img/about/window.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
@@ -25,8 +25,13 @@ const About = () => {
 				{/* Text & img wrapper */}
 				<div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16">
 					{/* Image */}
-					<div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
-						<img src={WomanImg} alt="" />
+					<div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden flex justify-center">
+						<img
+							src={BackKate}
+							alt=""
+							height={"567px"}
+							width={"459px"}
+						/>
 					</div>
 					{/* Text */}
 					<motion.div

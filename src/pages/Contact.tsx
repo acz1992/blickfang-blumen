@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import WomanImg from "../assets/img/contact/woman.png";
+import BikeFlower from "../assets/img/contact/bike-flower.png";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
@@ -66,7 +66,12 @@ const Contact = () => {
 						transition={{ transition: transition1, duration: 1.5 }}
 						className="lg:flex-1"
 					>
-						<img src={WomanImg} alt="" />
+						<img
+							src={BikeFlower}
+							height={"962px"}
+							width={"653px"}
+							alt=""
+						/>
 					</motion.div>
 				</div>
 			</div>
