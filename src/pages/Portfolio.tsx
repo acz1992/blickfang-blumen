@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import Image1 from "../assets/img/portfolio/1.png";
-import Image2 from "../assets/img/portfolio/2.png";
-import Image3 from "../assets/img/portfolio/3.png";
-import Image4 from "../assets/img/portfolio/4.png";
+import Image1 from "../assets/img/portfolio/reef.png";
+import Image2 from "../assets/img/portfolio/retro.png";
+import Image3 from "../assets/img/portfolio/studio.png";
+import Image4 from "../assets/img/portfolio/summer.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
@@ -54,6 +54,8 @@ const Portfolio = () => {
 							<img
 								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
 								src={Image1}
+								height={"220px"}
+								width={"320px"}
 								alt=""
 							/>
 						</div>
@@ -62,6 +64,8 @@ const Portfolio = () => {
 							<img
 								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
 								src={Image2}
+								height={"220px"}
+								width={"320px"}
 								alt=""
 							/>
 						</div>
@@ -70,6 +74,8 @@ const Portfolio = () => {
 							<img
 								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
 								src={Image3}
+								height={"220px"}
+								width={"320px"}
 								alt=""
 							/>
 						</div>
@@ -78,6 +84,8 @@ const Portfolio = () => {
 							<img
 								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
 								src={Image4}
+								height={"220px"}
+								width={"320px"}
 								alt=""
 							/>
 						</div>

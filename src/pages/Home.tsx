@@ -45,7 +45,7 @@ const Home = () => {
 							animate={{ scale: 1 }}
 							exit={{ scale: 0 }}
 							transition={transition1}
-							className="relative lg:-right-40 overflow-hidden lg:pt-10 "
+							className="relative lg:-right-40 overflow-hidden lg:pt-10"
 						>
 							<motion.img
 								whileHover={{ scale: 1.1 }}
