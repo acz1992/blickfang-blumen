@@ -54,7 +54,7 @@ const Home = () => {
 								height={"1037px"}
 								width={"761px"}
 								alt=""
-								className=""
+								className="bg-[#eef7f9] bg-opacity-50"
 							/>
 						</motion.div>
 					</div>

@@ -17,6 +17,6 @@
 	}
 
 	p {
-		@apply bg-white p-3 bg-opacity-50;
+		@apply bg-[#eef7f9] p-3 bg-opacity-50;
 	}
 }
