@@ -43,15 +43,19 @@ const CursorProvider = ({ children }: { children: ReactNode }) => {
 		default: {
 			x: cursorPos.x - 16,
 			y: cursorPos.y - 16,
-			backgroundColor: "#0e1112",
+			/* backgroundColor: "#0e1112", */
+			backgroundColor: "#e34c2d",
 		},
 		text: {
 			width: "150px",
 			height: "150px",
 			x: cursorPos.x - 72,
 			y: cursorPos.y - 72,
-			backgroundColor: "#fff",
-			mixBlendMode: "difference",
+			/* backgroundColor: "#fff",
+			mixBlendMode: "difference", */
+			backgroundColor: "#cbe2ea",
+			mixBlendMode: "#cbe2ea",
+			opacity: "0.6",
 		},
 		none: {
 			width: 0,
