@@ -4,7 +4,9 @@ export default {
 	theme: {
 		fontFamily: {
 			primary: "Playfair Display",
-			secondary: "Mulish",
+			/* secondary: "Mulish", */
+			secondary: "Lora",
+			tertiary: "Forum",
 		},
 		screens: {
 			sm: "640px",
@@ -14,8 +16,10 @@ export default {
 		},
 		extend: {
 			colors: {
-				primary: "#0E1112",
+				/* primary: "#0E1112", */
+				primary: "#e34c2d",
 				grey: "#484B4B",
+				background: "#cbe2ea",
 
 				accent: "#EEF7F9",
 			},

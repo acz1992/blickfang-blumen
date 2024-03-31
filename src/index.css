@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply overflow-hidden text-primary font-secondary bg-white;
+		@apply overflow-hidden text-primary font-secondary bg-background;
 	}
 	.h1 {
 		@apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
@@ -14,5 +14,20 @@
 	}
 	.btn {
 		@apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+		transition: background-color 0.3s ease-in-out; /* Set transition for background color change */
+	}
+
+	/* Apply hover effect with a delay */
+	.btn:hover {
+		@apply bg-[#f28068];
+		transition-delay: 0.2s; /* Delay the hover effect by 0.5 seconds */
+	}
+
+	p {
+		@apply bg-[#eef7f9] p-3 bg-opacity-50 font-tertiary;
+	}
+
+	input[placeholder] {
+		@apply bg-[#eef7f9] bg-opacity-40 placeholder:text-primary placeholder:text-opacity-70 font-tertiary;
 	}
 }

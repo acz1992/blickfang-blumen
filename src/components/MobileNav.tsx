@@ -35,7 +35,7 @@ const MobileNav = () => {
 				variants={menuVariants}
 				initial="hidden"
 				animate={openMenu ? "show" : ""}
-				className="bg-white shadow-2xl w-4/5 absolute top-0 right-0 mx-w-xs h-screen z-20"
+				className="bg-[#eef7f9] shadow-2xl w-4/5 absolute top-0 right-0 mx-w-xs h-screen z-20"
 			>
 				{/* Icon */}
 				<div
@@ -45,7 +45,7 @@ const MobileNav = () => {
 					<IoMdClose />
 				</div>
 				{/* Menu List */}
-				<ul className="h-full flex flex-col justify-center items-center gap-y-8  text-primary font-primary font-bold text-3xl ">
+				<ul className="h-full flex flex-col justify-center items-center gap-y-8 font-secondary font-semibold text-3xl ">
 					<li onClick={() => setOpenMenu(false)}>
 						<Link to="/">Home</Link>
 					</li>

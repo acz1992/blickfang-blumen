@@ -1,6 +1,6 @@
-import React from "react";
 import Socials from "./Socials";
-import Logo from "../assets/img/header/logo.svg";
+/* import Logo from "../assets/img/header/logo.svg"; */
+import Logo from "../assets/img/header/blicklogo.png";
 import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
 
@@ -16,25 +16,26 @@ const Header = () => {
 				<nav className="hidden xl:flex gap-x-12 font-semibold">
 					<Link
 						to={"/"}
-						className="text-[#696c6d] hover:text-primary transition"
+						/* hover:text-primary */
+						className="text-primary hover:opacity-50 transition"
 					>
 						Home
 					</Link>
 					<Link
 						to={"/about"}
-						className="text-[#696c6d] hover:text-primary transition"
+						className="text-primary hover:opacity-50 transition"
 					>
 						About
 					</Link>
 					<Link
 						to={"/portfolio"}
-						className="text-[#696c6d] hover:text-primary transition"
+						className="text-primary hover:opacity-50 transition"
 					>
 						Portfolio
 					</Link>
 					<Link
 						to={"/contact"}
-						className="text-[#696c6d] hover:text-primary transition"
+						className="text-primary hover:opacity-50 transition"
 					>
 						Contact
 					</Link>
