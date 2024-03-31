@@ -1,15 +1,19 @@
 import { useContext } from "react";
-import Image1 from "../assets/img/portfolio/reef.png";
-import Image2 from "../assets/img/portfolio/retro.png";
-import Image3 from "../assets/img/portfolio/studio.png";
-import Image4 from "../assets/img/portfolio/summer.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
+import PortfolioImage from "../components/PortfolioImage";
+import Image1 from "../assets/img/portfolio/reef.png";
+import Image2 from "../assets/img/portfolio/retro.png";
+import Image3 from "../assets/img/portfolio/studio.png";
+import Image4 from "../assets/img/portfolio/summer.png";
 
 const Portfolio = () => {
 	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)!;
+
+	const images = [Image1, Image2, Image3, Image4]; // Array of image sources
+
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}
@@ -47,46 +51,10 @@ const Portfolio = () => {
 					</motion.div>
 					{/* Images Grid */}
 					<div className="grid grid-cols-2 lg:gap-2">
-						{/* Image 1 */}
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src={Image1}
-								height={"220px"}
-								width={"320px"}
-								alt=""
-							/>
-						</div>
-						{/* Image 2 */}
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src={Image2}
-								height={"220px"}
-								width={"320px"}
-								alt=""
-							/>
-						</div>
-						{/* Image 3 */}
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src={Image3}
-								height={"220px"}
-								width={"320px"}
-								alt=""
-							/>
-						</div>
-						{/* Image 4 */}
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src={Image4}
-								height={"220px"}
-								width={"320px"}
-								alt=""
-							/>
-						</div>
+						{/* Render images using map */}
+						{images.map((image, index) => (
+							<PortfolioImage key={index} src={image} />
+						))}
 					</div>
 				</div>
 			</div>
