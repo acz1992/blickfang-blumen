@@ -4,7 +4,9 @@ export default {
 	theme: {
 		fontFamily: {
 			primary: "Playfair Display",
-			secondary: "Mulish",
+			/* secondary: "Mulish", */
+			secondary: "Lora",
+			tertiary: "Forum",
 		},
 		screens: {
 			sm: "640px",

@@ -31,14 +31,12 @@ const Portfolio = () => {
 						className="flex flex-col lg:items-start"
 					>
 						<h1 className="h1">Portfolio</h1>
-						<p className="mb-12 max-w-sm">
-							Blickanfang Blumen bloomed from my love of flowers,{" "}
-							<b>desire to share the beauty of the world</b> and
-							my passion for floral arrangement.
-							<br />
-							<br />I spend my free-time wandering Leipzig and
-							traversing Flower markets, in order to source the
-							most beautiful specimens that I can find.
+						<p className="mb-8 max-w-sm text-justify">
+							We cater to a range of{" "}
+							<b>different styles and event types</b>. So
+							regardless as to whether you need flowers for a
+							dinner or wedding, Blickfang Blumen is on hand to
+							always provide for your bespoke needs.
 						</p>
 						<Link
 							to={"/contact"}

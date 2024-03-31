@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import FlowerTat from "../assets/img/home/faceless-guy.png";
+import HoldingFlowers from "../assets/img/home/faceless-guy.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
@@ -31,7 +31,7 @@ const Home = () => {
 						<h1 className="h1">
 							Floral Arranger <br /> & fashion lover{" "}
 						</h1>
-						<p className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12">
+						<p className="text-[26px] lg:text-[36px] font-secondary font-normal mb-4 lg:mb-12">
 							Leipzig, Germany
 						</p>
 						<Link to={"/contact"} className="btn mb-[30px]">
@@ -50,10 +50,10 @@ const Home = () => {
 							<motion.img
 								whileHover={{ scale: 1.1 }}
 								transition={{ transition1 }}
-								src={FlowerTat}
+								src={HoldingFlowers}
 								height={"1037px"}
 								width={"761px"}
-								alt=""
+								alt="Guy holding flowers"
 								className="bg-[#eef7f9] bg-opacity-50"
 							/>
 						</motion.div>

@@ -49,7 +49,7 @@ const Contact = () => {
 								/>
 							</div>
 							<input
-								className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-primary"
+								className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3"
 								type="text"
 								placeholder="Your message"
 							/>
