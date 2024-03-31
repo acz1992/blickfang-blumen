@@ -14,6 +14,13 @@
 	}
 	.btn {
 		@apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+		transition: background-color 0.3s ease-in-out; /* Set transition for background color change */
+	}
+
+	/* Apply hover effect with a delay */
+	.btn:hover {
+		@apply bg-[#f28068];
+		transition-delay: 0.2s; /* Delay the hover effect by 0.5 seconds */
 	}
 
 	p {

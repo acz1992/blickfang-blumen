@@ -1,6 +1,5 @@
 import {
 	ImFacebook,
-	ImTwitter,
 	/* ImPinterest, */
 	ImInstagram,
 } from "react-icons/im";
@@ -11,20 +10,11 @@ const Socials = () => {
 			<ul className="flex gap-x-4 ">
 				<li>
 					<a
-						href="http://www.facebook.com"
+						href="https://www.facebook.com/Blickfang.blumen.leipzig"
 						target="_blank"
 						className="hover:opacity-50 transition"
 					>
 						<ImFacebook />
-					</a>
-				</li>
-				<li>
-					<a
-						href="http://www.twitter.com"
-						target="_blank"
-						className="hover:opacity-50 transition"
-					>
-						<ImTwitter />
 					</a>
 				</li>
 				{/* 	<li>
@@ -38,7 +28,7 @@ const Socials = () => {
 				</li> */}
 				<li>
 					<a
-						href="http://www.instagram.com"
+						href="https://www.instagram.com/blickfang.blumen/"
 						target="_blank"
 						className="hover:opacity-50 transition"
 					>

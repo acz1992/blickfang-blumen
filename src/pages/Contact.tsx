@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import BikeFlower from "../assets/img/contact/bike-flower.png";
+import MakingFlowers from "../assets/img/contact/process.jpg";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
@@ -53,7 +53,7 @@ const Contact = () => {
 								type="text"
 								placeholder="Your message"
 							/>
-							<button className="btn mb-[30px] mx-auto lg:mx-0 self-start">
+							<button className="btn mb-[30px] mt-5 mx-auto lg:mx-0 self-start">
 								Send it
 							</button>
 						</form>
@@ -67,10 +67,11 @@ const Contact = () => {
 						className="lg:flex-1"
 					>
 						<img
-							src={BikeFlower}
+							src={MakingFlowers}
 							height={"962px"}
 							width={"653px"}
-							alt=""
+							alt="Making Flowers"
+							className="w-full max-h-96 lg:max-h-max"
 						/>
 					</motion.div>
 				</div>
