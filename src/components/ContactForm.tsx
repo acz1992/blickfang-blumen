@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
 	const form = useRef<HTMLFormElement>(null);
-	const [emailSubmitted, setEmailSubmitted] = useState(false);
+	const [emailSubmitted, setEmailSubmitted] = useState(true);
 
 	const [formData, setFormData] = useState({
 		name: "",
@@ -110,8 +110,8 @@ const ContactForm = () => {
 
 			{emailSubmitted && (
 				<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-					<div className="bg-white p-5 rounded-lg">
-						<p className="text-green-500  text-base font-bold mt-2">
+					<div className="bg-[#eef7f9] p-5 rounded-lg">
+						<p className="text-primary text-lg font-bold mt-2">
 							I&apos;ll be in touch soon
 						</p>
 					</div>
