@@ -108,7 +108,7 @@ const ContactForm = () => {
 				</button>
 			</form>
 
-			{/* {emailSubmitted && (
+			{emailSubmitted && (
 				<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
 					<div className="bg-white p-5 rounded-lg">
 						<p className="text-green-500  text-base font-bold mt-2">
@@ -116,7 +116,7 @@ const ContactForm = () => {
 						</p>
 					</div>
 				</div>
-			)} */}
+			)}
 		</>
 	);
 };
