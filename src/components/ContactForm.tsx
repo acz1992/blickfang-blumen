@@ -1,19 +1,36 @@
 import { useEffect, useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
 	const form = useRef<HTMLFormElement>(null);
 	const [emailSubmitted, setEmailSubmitted] = useState(false);
 
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
+
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = e.target;
+		setFormData({
+			...formData,
+			[name]: value,
+		});
+	};
+
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
+		console.log("Service ID:", import.meta.env.VITE_SERVICE_ID);
+		console.log("Template ID:", import.meta.env.VITE_TEMPLATE_ID);
+		console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
 		emailjs
 			.sendForm(
-				import.meta.env.REACT_APP_SERVICE_ID,
-				import.meta.env.REACT_APP_TEMPLATE_ID,
+				import.meta.env.VITE_SERVICE_ID!,
+				import.meta.env.VITE_TEMPLATE_ID!,
 				form.current!,
-				import.meta.env.REACT_APP_PUBLIC_KEY
+				import.meta.env.VITE_PUBLIC_KEY!
 			)
 			.then(
 				() => {
@@ -21,7 +38,7 @@ const ContactForm = () => {
 					setEmailSubmitted(true);
 				},
 				(error) => {
-					console.log("FAILED...", error.text);
+					console.log("FAILED...", error);
 				}
 			);
 		if (form.current) form.current.reset(); // Checking if form.current is not null before calling reset
@@ -58,6 +75,8 @@ const ContactForm = () => {
 						placeholder="Your name"
 						name="name"
 						id="name"
+						value={formData.name}
+						onChange={handleInputChange}
 						required
 					/>
 					<input
@@ -66,6 +85,8 @@ const ContactForm = () => {
 						placeholder="Your email address"
 						name="email"
 						id="email"
+						value={formData.email}
+						onChange={handleInputChange}
 						required
 					/>
 				</div>
@@ -75,6 +96,8 @@ const ContactForm = () => {
 					placeholder="Your message"
 					name="message"
 					id="message"
+					value={formData.message}
+					onChange={handleInputChange}
 					required
 				/>
 				<button
@@ -85,7 +108,7 @@ const ContactForm = () => {
 				</button>
 			</form>
 
-			{emailSubmitted && (
+			{/* {emailSubmitted && (
 				<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
 					<div className="bg-white p-5 rounded-lg">
 						<p className="text-green-500  text-base font-bold mt-2">
@@ -93,7 +116,7 @@ const ContactForm = () => {
 						</p>
 					</div>
 				</div>
-			)}
+			)} */}
 		</>
 	);
 };
