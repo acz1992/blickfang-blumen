@@ -22,9 +22,6 @@ const ContactForm = () => {
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		console.log("Service ID:", import.meta.env.VITE_SERVICE_ID);
-		console.log("Template ID:", import.meta.env.VITE_TEMPLATE_ID);
-		console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
 		emailjs
 			.sendForm(
 				import.meta.env.VITE_SERVICE_ID!,
@@ -36,12 +33,12 @@ const ContactForm = () => {
 				() => {
 					console.log("SUCCESS!");
 					setEmailSubmitted(true);
+					if (form.current) form.current.reset();
 				},
 				(error) => {
 					console.log("FAILED...", error);
 				}
 			);
-		if (form.current) form.current.reset(); // Checking if form.current is not null before calling reset
 	};
 
 	// Overlay confirming Form Submission
