@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
 	const form = useRef<HTMLFormElement>(null);
-	const [emailSubmitted, setEmailSubmitted] = useState(true);
+	const [emailSubmitted, setEmailSubmitted] = useState(false);
 
 	const [formData, setFormData] = useState({
 		name: "",
