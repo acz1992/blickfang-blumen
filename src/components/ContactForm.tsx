@@ -33,7 +33,11 @@ const ContactForm = () => {
 				() => {
 					console.log("SUCCESS!");
 					setEmailSubmitted(true);
-					if (form.current) form.current.reset();
+					setFormData({
+						name: "",
+						email: "",
+						message: "",
+					});
 				},
 				(error) => {
 					console.log("FAILED...", error);
