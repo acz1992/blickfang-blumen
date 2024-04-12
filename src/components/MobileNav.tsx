@@ -40,7 +40,7 @@ const MobileNav = () => {
 				onClick={() => setOpenMenu(true)}
 				className="text-3xl cursor-pointer"
 			>
-				<CgMenuRight className="text-primary" />
+				<CgMenuRight className="text-primary transition-transform transform-gpu hover:scale-125" />
 			</div>
 			{/* Menu */}
 			<motion.div
@@ -52,7 +52,7 @@ const MobileNav = () => {
 				{/* Icon */}
 				<div
 					onClick={() => setOpenMenu(false)}
-					className="text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer"
+					className="text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer transition-transform transform-gpu hover:scale-125"
 				>
 					<IoMdClose className="text-white" />
 				</div>
