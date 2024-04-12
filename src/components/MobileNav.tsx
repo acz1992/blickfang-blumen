@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Variants } from "../utils/Props";
 
+interface NavLink {
+	to: string;
+	text: string;
+}
+
 // Menu Variants
 
 const menuVariants: Variants = {
@@ -18,6 +23,13 @@ const menuVariants: Variants = {
 		},
 	},
 };
+
+const navLinks: NavLink[] = [
+	{ to: "/", text: "Home" },
+	{ to: "/about", text: "About" },
+	{ to: "/portfolio", text: "Portfolio" },
+	{ to: "/contact", text: "Contact" },
+];
 
 const MobileNav = () => {
 	const [openMenu, setOpenMenu] = useState(false);
@@ -46,18 +58,17 @@ const MobileNav = () => {
 				</div>
 				{/* Menu List */}
 				<ul className="h-full flex flex-col justify-center items-center gap-y-8 font-secondary font-semibold text-3xl ">
-					<li onClick={() => setOpenMenu(false)}>
-						<Link to="/">Home</Link>
-					</li>
-					<li onClick={() => setOpenMenu(false)}>
-						<Link to="/about">About</Link>
-					</li>
-					<li onClick={() => setOpenMenu(false)}>
-						<Link to="/portfolio">Portfolio</Link>
-					</li>
-					<li onClick={() => setOpenMenu(false)}>
-						<Link to="/contact">Contact</Link>
-					</li>
+					{navLinks.map((link, index) => (
+						<li key={index} onClick={() => setOpenMenu(false)}>
+							<Link
+								to={link.to}
+								className="group transition duration-300 relative"
+							>
+								{link.text}
+								<span className="block absolute left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500"></span>
+							</Link>
+						</li>
+					))}
 				</ul>
 			</motion.div>
 		</nav>

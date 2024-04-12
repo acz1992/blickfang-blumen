@@ -48,14 +48,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-{
-	/* <Link
-								key={index}
-								onClick={handleCloseMenu}
-								to={item.link}
-								className="group transition duration-300 relative"
-							>
-								{item.title}
-								<span className="block absolute left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-500"></span>
-							</Link> */
-}
