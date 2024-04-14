@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { IoMdClose } from "react-icons/io";
 import { CgMenuRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
@@ -33,8 +33,27 @@ const navLinks: NavLink[] = [
 
 const MobileNav = () => {
 	const [openMenu, setOpenMenu] = useState(false);
+	const navigationRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleOutsideClick = (event: MouseEvent) => {
+			if (
+				navigationRef.current &&
+				!navigationRef.current.contains(event.target as Node)
+			) {
+				setOpenMenu(false);
+			}
+		};
+
+		document.body.addEventListener("click", handleOutsideClick);
+
+		return () => {
+			document.body.removeEventListener("click", handleOutsideClick);
+		};
+	}, []);
+
 	return (
-		<nav className="text-white xl:hidden">
+		<nav ref={navigationRef} className="text-white xl:hidden">
 			{/* Nav open Button */}
 			<div
 				onClick={() => setOpenMenu(true)}
