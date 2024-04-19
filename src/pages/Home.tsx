@@ -29,7 +29,7 @@ const Home = () => {
 						className="w-full pt-36 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start"
 					>
 						<h1 className="h1 text-justify">
-							Floral Arranger <br /> & fashion lover{" "}
+							Fresh & Dried Flowers <br /> for Order{" "}
 						</h1>
 						<p className="text-[26px] lg:text-[36px] font-secondary font-normal mb-4 lg:mb-12">
 							Leipzig, Germany
