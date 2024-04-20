@@ -55,7 +55,7 @@ const About = () => {
 							most beautiful specimens that I can find.
 						</p>
 						<Link to={"./portfolio"} className="btn">
-							View some examples
+							Here are samples of my work
 						</Link>
 					</motion.div>
 				</div>
