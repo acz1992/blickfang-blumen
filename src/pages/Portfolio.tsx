@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
-import PortfolioImage from "../components/PortfolioImage";
+/* import PortfolioImage from "../components/PortfolioImage";
 import Image1 from "../assets/img/portfolio/reef.png";
 import Image2 from "../assets/img/portfolio/retro.png";
 import Image3 from "../assets/img/portfolio/studio.png";
-import Image4 from "../assets/img/portfolio/summer.png";
+import Image4 from "../assets/img/portfolio/summer.png"; */
+import PortfolioGallery from "../components/PortfolioGallery";
 
 const Portfolio = () => {
 	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)!;
 
-	const images = [Image1, Image2, Image3, Image4]; // Array of image sources
+	/* const images = [Image1, Image2, Image3, Image4]; */ // Array of image sources
 
 	return (
 		<motion.section
@@ -50,12 +51,16 @@ const Portfolio = () => {
 						</Link>
 					</motion.div>
 					{/* Images Grid */}
-					<div className="grid grid-cols-2 lg:gap-2">
-						{/* Render images using map */}
+					<div className="h-[500px] aspect-square object-cover overflow-hidden">
+						<PortfolioGallery />
+					</div>
+
+					{/* <div className="grid grid-cols-2 lg:gap-2">
+						
 						{images.map((image, index) => (
 							<PortfolioImage key={index} src={image} />
 						))}
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</motion.section>
