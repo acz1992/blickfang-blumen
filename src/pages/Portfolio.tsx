@@ -3,17 +3,20 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../utils/transitions";
 import { CursorContext } from "../context/CursorContext";
-/* import PortfolioImage from "../components/PortfolioImage";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import PortfolioImage from "../components/PortfolioImage";
 import Image1 from "../assets/img/portfolio/reef.png";
 import Image2 from "../assets/img/portfolio/retro.png";
 import Image3 from "../assets/img/portfolio/studio.png";
-import Image4 from "../assets/img/portfolio/summer.png"; */
-import PortfolioGallery from "../components/PortfolioGallery";
-
+import Image4 from "../assets/img/portfolio/summer.png";
+/* import PortfolioGallery from "../components/PortfolioGallery";
+ */
 const Portfolio = () => {
 	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)!;
 
-	/* const images = [Image1, Image2, Image3, Image4]; */ // Array of image sources
+	const images = [Image1, Image2, Image3, Image4];
 
 	return (
 		<motion.section
@@ -53,7 +56,18 @@ const Portfolio = () => {
 					{/* Images Grid */}
 					<div /* className="h-[500px] aspect-square object-cover overflow-hidden" */
 					>
-						<PortfolioGallery />
+						<Carousel
+							showArrows
+							showStatus={false}
+							autoPlay
+							infiniteLoop
+							stopOnHover
+							/* className="object-cover hover:scale-110 transition-all duration-1000" */
+						>
+							{images.map((image, index) => (
+								<PortfolioImage key={index} src={image} />
+							))}
+						</Carousel>
 					</div>
 
 					{/* <div className="grid grid-cols-2 lg:gap-2">
