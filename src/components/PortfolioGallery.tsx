@@ -10,7 +10,7 @@ const PortfolioGallery = () => {
 			autoPlay
 			infiniteLoop
 			stopOnHover
-			className="object-cover hover:scale-110 transition-all duration-1000"
+			/* className="object-cover hover:scale-110 transition-all duration-1000" */
 		>
 			<div>
 				<img src="src/assets/img/portfolio/reef.png" />
