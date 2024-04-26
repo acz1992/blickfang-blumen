@@ -51,7 +51,8 @@ const Portfolio = () => {
 						</Link>
 					</motion.div>
 					{/* Images Grid */}
-					<div className="h-[500px] aspect-square object-cover overflow-hidden">
+					<div /* className="h-[500px] aspect-square object-cover overflow-hidden" */
+					>
 						<PortfolioGallery />
 					</div>
 
