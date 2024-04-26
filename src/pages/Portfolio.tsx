@@ -54,15 +54,15 @@ const Portfolio = () => {
 						</Link>
 					</motion.div>
 					{/* Images Grid */}
-					<div /* className="h-[500px] aspect-square object-cover overflow-hidden" */
-					>
+					<div className="h-full md:h-[500px] aspect-square overflow-hidden">
 						<Carousel
 							showArrows
 							showStatus={false}
+							showThumbs={false}
 							autoPlay
 							infiniteLoop
 							stopOnHover
-							/* className="object-cover hover:scale-110 transition-all duration-1000" */
+							className="object-cover hover:scale-110 transition-all duration-1000"
 						>
 							{images.map((image, index) => (
 								<PortfolioImage key={index} src={image} />
