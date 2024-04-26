@@ -4,15 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 const portfolioGallery = () => {
 	console.log("Portfolio Gallery rendered");
 	return (
-		<Carousel
-			showArrows
-			showStatus={false}
-			autoPlay
-			infiniteLoop
-			swipeable
-			stopOnHover
-			className="object-cover hover:scale-110 transition-all duration-1000"
-		>
+		<Carousel showArrows>
 			<div>
 				<img src="src/assets/img/portfolio/reef.png" />
 			</div>
